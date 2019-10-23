@@ -1,0 +1,14 @@
+<h1>Recipe you are editing:
+<%=@recipe.title%></h1>
+
+
+<h3>Update your Recipe:</h3>
+<form method="post" action="/recipes/<%=@recipe.id%>">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  Recipe Name: <input type="text" name="title"></p>
+  <input type="submit" value="submit">
+</form><br>
+
+<p>Go back to your <a href="/recipes">recipes</a>.</p><br>
+
+<a href="/logout">Logout</a>

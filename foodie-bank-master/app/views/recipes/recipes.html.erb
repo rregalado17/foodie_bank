@@ -1,0 +1,12 @@
+<h1> <%="You are logged in as #{session[:email]}" %> </h1>
+
+<h3>Your Recipes:</h3>
+<% @recipes.each do |recipe| %>
+    <li><a href="/recipes/<%= recipe.id %>"><%= recipe.title %></a></li>
+<%end%><br>
+
+<br>
+
+<p>Add a new recipe <a href="/recipes/new">here.</a><br>
+
+<a href="/logout">Logout</a>

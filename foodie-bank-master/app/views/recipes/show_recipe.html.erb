@@ -1,0 +1,10 @@
+<h2><%=@recipe.title%></h2>
+<form action="/recipes/<%=@recipe.id %>/delete" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Recipe">
+</form> 
+<form action="/recipes/<%=@recipe.id%>/edit" method="get">
+  <input type="submit" value="Edit Recipe">
+</form><br>
+<p>Go back to your <a href="/recipes">recipes</a>.</p><br>
+<a href="/logout">Logout</a>
